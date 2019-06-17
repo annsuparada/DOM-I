@@ -49,17 +49,19 @@ let middle = document.getElementById("middle-img")
 middle.setAttribute('src', 'img/mid-page-accent.jpg')
 cta.setAttribute('atr', 'Image of code snippets across the screen')
 
+const anchText = document.querySelectorAll("nav a");
+for (let i = 0; i < anchText.length; i++) {
+  anchText[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+  anchText[i].style.color = "green";
+}
 
-
-let ctaText = document.querySelector('.cta-text h1');
+const ctaText = document.querySelector('.cta-text h1');
 ctaText.innerHTML = siteContent['cta']['h1'];
 
-let ctaButton = document.querySelector('.cta-text button');
+const ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerText = siteContent['cta']['button'];
  
 
-// let mainContent = document.querySelector('.text-content h4');
-// mainContent.innerText = siteContent['main-content']['features-h4']
 
 const mainH4 = document.querySelectorAll('.main-content .text-content h4');
 const mainContent = document.querySelectorAll('.main-content .text-content p')
@@ -76,7 +78,14 @@ mainContent[3].textContent = siteContent['main-content']['product-content'];
 mainH4[4].textContent = siteContent['main-content']['vision-h4'];
 mainContent[4].textContent = siteContent['main-content']['vision-content'];
 
+const contactH4 = document.querySelector('.contact h4')
+const contactP = document.querySelectorAll('.contact p')
 
+contactH4.textContent = siteContent['contact']['contact-h4']
+
+contactP[0].textContent = siteContent['contact']['address']
+contactP[1].textContent = siteContent['contact']['phone']
+contactP[2].textContent = siteContent['contact']['email']
 
 
 
