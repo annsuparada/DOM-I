@@ -58,8 +58,27 @@ let ctaButton = document.querySelector('.cta-text button');
 ctaButton.innerText = siteContent['cta']['button'];
  
 
-let mainContent = document.querySelector('.text-content h4');
-mainContent.innerText = siteContent['main-content']['features-h4']
+// let mainContent = document.querySelector('.text-content h4');
+// mainContent.innerText = siteContent['main-content']['features-h4']
+
+const mainH4 = document.querySelectorAll('.main-content .text-content h4');
+const mainContent = document.querySelectorAll('.main-content .text-content p')
+
+mainH4[0].textContent = siteContent['main-content']['features-h4'];
+mainContent[0].textContent = siteContent['main-content']['features-content'];
+mainH4[1].textContent = siteContent['main-content']['about-h4'];
+mainContent[1].textContent = siteContent['main-content']['about-content'];
+
+mainH4[2].textContent = siteContent['main-content']['services-h4'];
+mainContent[2].textContent = siteContent['main-content']['services-content'];
+mainH4[3].textContent = siteContent['main-content']['product-h4'];
+mainContent[3].textContent = siteContent['main-content']['product-content'];
+mainH4[4].textContent = siteContent['main-content']['vision-h4'];
+mainContent[4].textContent = siteContent['main-content']['vision-content'];
+
+
+
+
 
 
 const footer = document.querySelector('footer p');
