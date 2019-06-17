@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br>Is <br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -43,6 +43,24 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let cta = document.getElementById("cta-img");
 cta.setAttribute('src', "img/header-img.png");
+cta.setAttribute('atr', 'Image of a code snippet')
 
 let middle = document.getElementById("middle-img")
 middle.setAttribute('src', 'img/mid-page-accent.jpg')
+cta.setAttribute('atr', 'Image of code snippets across the screen')
+
+
+
+let ctaText = document.querySelector('.cta-text h1');
+ctaText.innerHTML = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.innerText = siteContent['cta']['button'];
+ 
+
+let mainContent = document.querySelector('.text-content h4');
+mainContent.innerText = siteContent['main-content']['features-h4']
+
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
