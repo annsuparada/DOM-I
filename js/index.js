@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM <br>Is <br>Awesome",
+    "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -48,6 +48,13 @@ for (let i = 0; i < anchText.length; i++) {
   anchText[i].style.color = "green";
 }
 
+// let items = 0;
+// Array.from('anchText').forEach(items => items.siteContent);
+// items.
+
+
+// console.log(anchText)
+
 
 //cta
 let cta = document.getElementById("cta-img");
@@ -55,10 +62,10 @@ cta.setAttribute('src', "img/header-img.png");
 cta.setAttribute('atr', 'Image of a code snippet')
 
 const ctaText = document.querySelector('.cta-text h1');
-ctaText.innerHTML = siteContent['cta']['h1'];
+ctaText.textContent = siteContent['cta']['h1'];
 
 const ctaButton = document.querySelector('.cta-text button');
-ctaButton.innerText = siteContent['cta']['button'];
+ctaButton.textContent = siteContent['cta']['button'];
  
 
 // const mainHeader = document.querySelectorAll('.main-content .text-content h4');
